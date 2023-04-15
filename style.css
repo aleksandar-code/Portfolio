@@ -28,7 +28,7 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
-  padding: 2rem 2rem;
+  padding: 2rem 0rem;
   flex-direction: column;
 }
 
@@ -71,6 +71,21 @@ h2 {
 .image-holder {
   position: relative;
 }
+
+.image-holder::after {
+  content: " ";
+  position: absolute;
+  width: 1000%;
+  height: 1000%;
+  background: red;
+  background: linear-gradient(110deg, red, violet, blue);
+  transform-origin: 0 100%;
+  transform: rotate(-20deg) scale(1.2, 1.2);
+  bottom: 0;
+  left: -10rem;
+  z-index: -1;
+}
+
 .author {
   color: black;
   font-weight: bold;
@@ -168,6 +183,27 @@ main {
   height: 3rem;
 }
 
+@media (min-width: 2000px) {
+  .image-holder::after {
+    display: none;
+  }
+}
+
+@media (min-width: 1151px) {
+  .image-holder::after {
+    content: " ";
+    position: absolute;
+    width: 1000%;
+    height: 1000%;
+    background: linear-gradient(110deg, var(--primary) 50%, white 50%);
+    transform-origin: 10% 100%;
+    transform: rotate(-10deg) scale(1.2, 1.2);
+    bottom: 0;
+    left: -10rem;
+    z-index: -1;
+  }
+}
+
 @media (max-width: 1150px) {
   .about {
     background-color: white;
@@ -179,6 +215,22 @@ main {
     float: left;
   }
 
+  .image-holder {
+    width: fit-content;
+  }
+
+  .image-holder::after {
+    content: " ";
+    position: absolute;
+    width: 1000%;
+    height: 1000%;
+    background: linear-gradient(110deg, var(--primary) 50%, white 50%);
+    transform-origin: 20% 100%;
+    transform: rotate(-20deg) scale(1.2, 1.2);
+    bottom: 0;
+    left: -10rem;
+    z-index: -1;
+  }
   .links {
     display: none;
   }
@@ -201,9 +253,6 @@ main {
     padding: 3rem;
   }
 
-  .image-holder {
-    position: relative;
-  }
   .author {
     color: black;
     font-weight: bold;
@@ -224,6 +273,19 @@ main {
 
   .image-holder {
     width: fit-content;
+  }
+
+  .image-holder::after {
+    content: " ";
+    position: absolute;
+    width: 1000%;
+    height: 1000%;
+    background: linear-gradient(110deg, var(--primary) 50%, white 50%);
+    transform-origin: 0% 100%;
+    transform: rotate(-20deg) scale(1.2, 1.2);
+    bottom: 0;
+    left: -10rem;
+    z-index: -1;
   }
 
   .portrait {
@@ -259,9 +321,6 @@ main {
     padding: 0rem;
   }
 
-  .image-holder {
-    position: relative;
-  }
   .author {
     color: white;
     font-weight: bold;
