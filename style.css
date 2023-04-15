@@ -21,23 +21,6 @@
 
 .introduction {
   text-align: center;
-  display: flex;
-  flex-direction: column;
-}
-
-.portrait {
-  max-width: 100%;
-  height: auto;
-}
-
-.links {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  align-self: center;
-}
-
-.portrait-background {
   z-index: 0;
   max-width: 100%;
   display: flex;
@@ -48,7 +31,24 @@
   padding: 2rem 2rem;
 }
 
-.portrait-background:after {
+.portrait {
+  max-width: 100px;
+  height: auto;
+  float: left;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: center;
+}
+
+.portrait-background {
+  display: inline-block;
+}
+
+.introduction:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -174,3 +174,6 @@ main {
   width: 3rem;
   height: 3rem;
 }
+/* 
+@media (max-width: 1000px) {
+} */
