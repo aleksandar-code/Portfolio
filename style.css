@@ -164,8 +164,20 @@ main {
 @media (min-width: 1330px) {
   .about {
     padding: 0;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: none;
   }
 
+  .author {
+    transform: none;
+    translate: 0 1000%;
+    color: white;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.021),
+      rgba(0, 0, 0, 0.425) 50%
+    );
+  }
   .links {
     position: relative;
     transform: translateX(78%);
@@ -181,12 +193,15 @@ main {
     height: auto;
     float: left;
     transform: translate(-2%, -2%);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
 }
 
 @media (max-width: 1329px) and (min-width: 801px) {
   .about {
     background-color: white;
+    border: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
 
   .portrait {
@@ -194,6 +209,7 @@ main {
     height: auto;
     float: left;
     transform: translate(-2%, 2%);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
 
   .text-holder {
@@ -219,10 +235,6 @@ main {
 
   .text-holder {
     padding: 3rem;
-  }
-
-  .about {
-    border: 1px solid black;
   }
 
   .author {
