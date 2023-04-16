@@ -26,10 +26,7 @@
   position: relative;
   overflow: hidden;
   padding: 2rem 2rem;
-}
-
-.about {
-  background-color: white;
+  margin: 0 auto;
 }
 
 .portrait {
@@ -59,8 +56,8 @@ h2 {
 }
 
 .about {
+  background-color: white;
   border: 1px solid black;
-  padding-top: 3rem;
 }
 
 .image-holder {
@@ -164,9 +161,19 @@ main {
   height: 3rem;
 }
 
-@media (max-width: 1150px) and (min-width: 951px) {
+@media (min-width: 1330px) {
   .about {
-    background-color: white;
+    padding: 0;
+  }
+
+  .links {
+    position: relative;
+    transform: translateX(78%);
+  }
+  .text-holder {
+    max-width: 1265px;
+    padding: unset;
+    padding-top: 2rem;
   }
 
   .portrait {
@@ -174,6 +181,23 @@ main {
     height: auto;
     float: left;
     transform: translate(-2%, -2%);
+  }
+}
+
+@media (max-width: 1329px) and (min-width: 801px) {
+  .about {
+    background-color: white;
+  }
+
+  .portrait {
+    max-width: 70%;
+    height: auto;
+    float: left;
+    transform: translate(-2%, 2%);
+  }
+
+  .text-holder {
+    max-width: 880px;
   }
 
   .image-holder {
@@ -208,11 +232,11 @@ main {
     position: absolute;
     font-size: 2rem;
     z-index: 1;
-    transform: translateX(285%);
+    transform: translateX(200%);
   }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 800px) {
   .about {
     background-color: white;
     display: flex;
