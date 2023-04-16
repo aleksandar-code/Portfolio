@@ -23,13 +23,9 @@
   text-align: center;
   z-index: 0;
   max-width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
   overflow: hidden;
   padding: 2rem 2rem;
-  flex-direction: column;
 }
 
 .about {
@@ -65,7 +61,6 @@ h2 {
 .about {
   border: 1px solid black;
   padding-top: 3rem;
-  max-width: 1360px;
 }
 
 .image-holder {
@@ -169,28 +164,7 @@ main {
   height: 3rem;
 }
 
-@media (min-width: 2000px) {
-  .image-holder::after {
-    display: none;
-  }
-}
-
-@media (min-width: 1151px) {
-  .image-holder::after {
-    content: " ";
-    position: absolute;
-    width: 1000%;
-    height: 1000%;
-    background: linear-gradient(110deg, var(--primary) 50%, white 50%);
-    transform-origin: 10% 100%;
-    transform: rotate(-10deg) scale(1.2, 1.2);
-    bottom: 0;
-    left: -10rem;
-    z-index: -1;
-  }
-}
-
-@media (max-width: 1150px) {
+@media (max-width: 1150px) and (min-width: 951px) {
   .about {
     background-color: white;
   }
@@ -199,36 +173,24 @@ main {
     max-width: 100%;
     height: auto;
     float: left;
+    transform: translate(-2%, -2%);
   }
 
   .image-holder {
     width: fit-content;
   }
 
-  .image-holder::after {
-    content: " ";
-    position: absolute;
-    width: 1000%;
-    height: 1000%;
-    background: linear-gradient(110deg, var(--primary) 50%, white 50%);
-    transform-origin: 20% 100%;
-    transform: rotate(-20deg) scale(1.2, 1.2);
-    bottom: 0;
-    left: -10rem;
-    z-index: -1;
-  }
-
   .links {
     display: none;
-  }
-
-  .portrait-background {
-    display: inline-block;
   }
 
   h2 {
     font-weight: 600;
     font-size: 2rem;
+  }
+
+  .introduction {
+    padding: 3rem;
   }
 
   .text-holder {
@@ -237,7 +199,6 @@ main {
 
   .about {
     border: 1px solid black;
-    padding: 3rem;
   }
 
   .author {
@@ -247,7 +208,7 @@ main {
     position: absolute;
     font-size: 2rem;
     z-index: 1;
-    transform: translateX(300%);
+    transform: translateX(285%);
   }
 }
 
@@ -260,19 +221,7 @@ main {
 
   .image-holder {
     width: fit-content;
-  }
-
-  .image-holder::after {
-    content: " ";
-    position: absolute;
-    width: 1000%;
-    height: 1000%;
-    background: linear-gradient(110deg, var(--primary) 50%, white 50%);
-    transform-origin: 0% 100%;
-    transform: rotate(-20deg) scale(1.2, 1.2);
-    bottom: 0;
-    left: -10rem;
-    z-index: -1;
+    margin: 0 auto;
   }
 
   .portrait {
@@ -305,7 +254,7 @@ main {
 
   .about {
     border: none;
-    padding: 0rem;
+    padding: 0;
   }
 
   .author {
