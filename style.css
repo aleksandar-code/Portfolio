@@ -28,7 +28,7 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
-  padding: 2rem 0rem;
+  padding: 2rem 2rem;
   flex-direction: column;
 }
 
@@ -70,20 +70,6 @@ h2 {
 
 .image-holder {
   position: relative;
-}
-
-.image-holder::after {
-  content: " ";
-  position: absolute;
-  width: 1000%;
-  height: 1000%;
-  background: red;
-  background: linear-gradient(110deg, red, violet, blue);
-  transform-origin: 0 100%;
-  transform: rotate(-20deg) scale(1.2, 1.2);
-  bottom: 0;
-  left: -10rem;
-  z-index: -1;
 }
 
 .author {
@@ -231,6 +217,7 @@ main {
     left: -10rem;
     z-index: -1;
   }
+
   .links {
     display: none;
   }
