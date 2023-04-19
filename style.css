@@ -239,7 +239,20 @@ main {
 
   .contact .links {
     align-self: flex-start;
-    margin-left: 1rem;
+  }
+
+  .contact {
+    text-align: left;
+    align-items: unset;
+    line-height: 2rem;
+  }
+
+  .contact p {
+    padding: 0;
+  }
+
+  .address {
+    padding: 2rem 0;
   }
 }
 
@@ -256,6 +269,10 @@ main {
 
   .main {
     margin: 0 auto;
+  }
+
+  .contact {
+    align-items: unset;
   }
 
   .portrait {
