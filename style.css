@@ -121,7 +121,7 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
   justify-items: center;
-  max-width: 1900px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -137,21 +137,28 @@ main {
   color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 1rem;
   border-radius: 10px;
   gap: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.project p {
+  padding: 0;
+}
+
+.project-info {
+  padding: 1rem;
 }
 
 .project-about {
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-between;
 }
 
 .screenshot {
-  max-width: 13rem;
-  min-height: 13rem;
+  max-width: 100%;
+  height: auto;
 }
 
 .contact {
@@ -386,5 +393,17 @@ main {
   .portrait-contact {
     max-width: 100%;
     height: auto;
+  }
+
+  .main {
+    padding: 0 1rem;
+  }
+
+  .introduction p {
+    padding: 0;
+  }
+
+  .introduction {
+    padding-bottom: 0;
   }
 }
