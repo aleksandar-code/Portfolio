@@ -250,6 +250,14 @@ main {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
 
+  .projects {
+    grid-template-columns: repeat(2, minmax(250px, 400px));
+  }
+
+  .main {
+    margin: 0 auto;
+  }
+
   .portrait {
     max-width: 70%;
     height: auto;
@@ -327,14 +335,15 @@ main {
 }
 
 @media (max-width: 800px) {
+  .projects {
+    grid-template-columns: minmax(100px, 500px);
+    place-content: center;
+  }
+
   .about {
     background-color: unset;
     display: flex;
     flex-direction: column;
-  }
-
-  section.introduction::before {
-    max-height: 601px;
   }
 
   .image-holder {
