@@ -15,7 +15,7 @@
   font-family: "Roboto", sans-serif;
 }
 
-section.introduction::before {
+body::before {
   content: "";
   background: linear-gradient(160deg, var(--primary) 50%, white 0%);
   position: absolute;
@@ -24,7 +24,12 @@ section.introduction::before {
   transform-origin: 0 100%;
   width: 100%;
   height: 100%;
-  translate: -50% -20%;
+  max-height: 400px;
+}
+
+.portrait-contact {
+  max-width: 50%;
+  height: auto;
 }
 
 .link {
@@ -52,10 +57,6 @@ section.introduction::before {
   align-items: center;
   gap: 0.5rem;
   align-self: center;
-}
-
-.portrait-background {
-  display: inline-block;
 }
 
 h2 {
@@ -89,6 +90,13 @@ h2 {
 .icon {
   width: 2rem;
   height: 2rem;
+  display: block;
+}
+
+.introduction .icon {
+  width: 2.7rem;
+  height: 2.7rem;
+  display: block;
 }
 
 p {
@@ -112,8 +120,9 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
-  padding: 1rem;
   justify-items: center;
+  max-width: 1900px;
+  margin: 0 auto;
 }
 
 .project-name {
@@ -169,8 +178,8 @@ main {
 }
 
 .call-to-action .icon {
-  width: 3rem;
-  height: 3rem;
+  width: 3.5rem;
+  height: 3.5rem;
 }
 
 @media (min-width: 1330px) {
@@ -178,6 +187,15 @@ main {
     padding: 0;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border: none;
+  }
+
+  .contact {
+    flex-direction: row;
+  }
+
+  .portrait-contact {
+    max-width: 100%;
+    height: auto;
   }
 
   .author {
@@ -190,9 +208,9 @@ main {
       rgba(0, 0, 0, 0.425) 50%
     );
   }
-  .links {
+  .introduction .links {
     position: relative;
-    transform: translateX(78%);
+    transform: translateX(75%);
   }
   .text-holder {
     max-width: 1265px;
@@ -206,6 +224,15 @@ main {
     float: left;
     transform: translate(-2%, -2%);
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+
+  .portrait-contact {
+    padding: 2rem;
+  }
+
+  .contact .links {
+    align-self: flex-start;
+    margin-left: 1rem;
   }
 }
 
@@ -224,6 +251,11 @@ main {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
 
+  .main {
+    text-align: left;
+    padding: 0 4rem;
+  }
+
   .text-holder {
     max-width: 880px;
   }
@@ -232,8 +264,12 @@ main {
     width: fit-content;
   }
 
-  .links {
+  .introduction .links {
     display: none;
+  }
+
+  .contact .links {
+    align-self: flex-start;
   }
 
   h2 {
@@ -257,6 +293,29 @@ main {
     font-size: 2rem;
     z-index: 1;
     transform: translateX(200%);
+  }
+
+  .contact {
+    flex-direction: row;
+  }
+
+  .portrait-contact {
+    padding: 2rem;
+  }
+
+  .contact {
+    padding: 4rem;
+    text-align: left;
+  }
+
+  .contact p {
+    padding: 0;
+    line-height: 2rem;
+    padding-right: 0.5rem;
+  }
+
+  .portrait-contact {
+    padding: 0;
   }
 }
 
@@ -322,5 +381,10 @@ main {
       rgba(0, 0, 0, 0.425) 50%,
       rgba(255, 255, 255, 0.021)
     );
+  }
+
+  .portrait-contact {
+    max-width: 100%;
+    height: auto;
   }
 }
