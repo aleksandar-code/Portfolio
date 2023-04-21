@@ -145,6 +145,11 @@ main {
   padding: 0;
 }
 
+.introduction p,
+.contact p {
+  font-size: 1.3rem;
+}
+
 .about {
   padding: 1.5rem;
 }
@@ -220,7 +225,7 @@ main {
   }
 
   .portrait-contact {
-    max-width: 100%;
+    max-width: 30%;
     height: auto;
   }
 
