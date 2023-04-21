@@ -148,6 +148,7 @@ main {
 .introduction p,
 .contact p {
   font-size: 1.3rem;
+  overflow-wrap: break-word;
 }
 
 .about {
@@ -176,7 +177,6 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   background-color: var(--primary);
   text-align: center;
 }
