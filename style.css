@@ -75,6 +75,7 @@ h2 {
 
 .image-holder {
   position: relative;
+  z-index: 1;
 }
 
 .author {
@@ -202,11 +203,33 @@ main {
 
 .hidden {
   opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
   transition: all 1s;
 }
 
 .show {
   opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.project:nth-child(2) {
+  transition-delay: 200ms;
+}
+
+.project:nth-child(3) {
+  transition-delay: 400ms;
+}
+
+.project:nth-child(4) {
+  transition-delay: 600ms;
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
 }
 
 @media (min-width: 2000px) {
@@ -343,10 +366,6 @@ main {
   .main {
     text-align: left;
     padding: 0 4rem;
-  }
-
-  .text-holder {
-    max-width: 880px;
   }
 
   .image-holder {
