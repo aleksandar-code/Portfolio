@@ -199,6 +199,16 @@ main {
   width: 3.5rem;
   height: 3.5rem;
 }
+
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+}
+
 @media (min-width: 2000px) {
   body::before {
     content: "";
